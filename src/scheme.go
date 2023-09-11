@@ -1,15 +1,24 @@
 package src
 
-import "github.com/tiptophelmet/cspolicy/src/scheme"
+import (
+	"regexp"
+)
 
 type SchemeVal struct {
-	sc scheme.Scheme
+	sc string
 }
 
 func (v *SchemeVal) String() string {
-	return v.sc.GetSchemeID()
+	schemePattern := "^[a-zA-Z0-9+.-]+:$"
+
+	regex, _ := regexp.Compile(schemePattern)
+	if matched := regex.MatchString(v.sc); matched {
+		return v.sc
+	}
+
+	return ""
 }
 
-func Scheme(sc scheme.Scheme) *SchemeVal {
-	return &SchemeVal{sc}
+func Scheme(scheme string) *SchemeVal {
+	return &SchemeVal{sc: scheme}
 }
