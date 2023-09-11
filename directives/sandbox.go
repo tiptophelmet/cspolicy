@@ -2,14 +2,16 @@ package directives
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/tiptophelmet/cspolicy/src/sandbox"
 )
 
 func Sandbox(val sandbox.SandboxVal) string {
-	if len(val) == 0 {
+	sandboxVal := strings.TrimSpace(string(val))
+	if len(sandboxVal) == 0 {
 		return ""
 	}
 
-	return fmt.Sprintf("sandbox %s;", val)
+	return fmt.Sprintf("sandbox %s;", sandboxVal)
 }
