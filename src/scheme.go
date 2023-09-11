@@ -7,7 +7,7 @@ type SchemeVal struct {
 }
 
 func (v *SchemeVal) String() string {
-	return string(v.sc)
+	return v.sc.GetSchemeID()
 }
 
 func Scheme(sc scheme.Scheme) *SchemeVal {
