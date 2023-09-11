@@ -17,15 +17,15 @@ func (c *FrameAncestorsConstraint) validate(source src.SourceVal) bool {
 	case *src.SchemeVal:
 	case *src.SelfVal:
 	case *src.NoneVal:
-		return true
 	default:
 		prefix := "cspolicy.constraint.FrameAncestorsConstraint"
 
 		format := "[%s] restricted source %s for frame-ancestors (value: %s), skipping...\n"
 		fmt.Printf(format, prefix, reflect.TypeOf(source).Elem(), source.String())
+		return false
 	}
 
-	return false
+	return true
 }
 
 func (c *FrameAncestorsConstraint) Sources(sources ...src.SourceVal) []src.SourceVal {
@@ -33,11 +33,9 @@ func (c *FrameAncestorsConstraint) Sources(sources ...src.SourceVal) []src.Sourc
 		return c.validated
 	}
 
-	c.validated = sources
-
-	for index, src := range c.validated {
-		if !c.validate(src) {
-			c.validated = append(c.validated[:index], c.validated[index+1:]...)
+	for _, src := range sources {
+		if c.validate(src) {
+			c.validated = append(c.validated, src)
 		}
 	}
 
