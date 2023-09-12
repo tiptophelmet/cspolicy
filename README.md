@@ -28,8 +28,8 @@ package main
 
 import (
     "github.com/tiptophelmet/cspolicy"
-	"github.com/tiptophelmet/cspolicy/src"
-	"github.com/tiptophelmet/cspolicy/directives"
+    "github.com/tiptophelmet/cspolicy/src"
+    "github.com/tiptophelmet/cspolicy/directives"
 )
 
 func main() {
