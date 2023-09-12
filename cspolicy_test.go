@@ -49,7 +49,7 @@ func TestBuild(t *testing.T) {
 		"img-src 'self' data: media.example.com avatars.example.com; " +
 		"upgrade-insecure-requests"
 
-	if gotVal == wantVal {
+	if gotVal != wantVal {
 		t.Errorf("got: %s, want: %s", gotVal, wantVal)
 	}
 }
