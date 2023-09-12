@@ -1,4 +1,3 @@
-// Sources for Content-Security-Policy directives.
 package src
 
 // ReportSampleVal represents the CSP 'report-sample' source.

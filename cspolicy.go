@@ -1,5 +1,4 @@
-// Content-Security-Policy package.
-// Provides functions to produce a valid Content-Security-Policy HTTP header value.
+// User-friendly API to build your Content-Security-Policy HTTP header.
 package cspolicy
 
 import (

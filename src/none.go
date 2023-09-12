@@ -1,6 +1,4 @@
-// Sources for Content-Security-Policy directives.
 package src
-
 
 // NoneVal represents the CSP 'none' source.
 // The 'none' source ensures that no content can be loaded from any source.

@@ -1,4 +1,3 @@
-// Sources for Content-Security-Policy directives.
 package src
 
 // UnsafeEvalVal represents the CSP 'unsafe-eval' source.

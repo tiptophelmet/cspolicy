@@ -1,4 +1,3 @@
-// Sources for Content-Security-Policy directives.
 package src
 
 // UnsafeHashesVal represents the CSP 'unsafe-hashes' source.
