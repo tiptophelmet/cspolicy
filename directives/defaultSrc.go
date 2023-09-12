@@ -1,4 +1,3 @@
-// Directives for Content-Security-Policy headers.
 package directives
 
 import (
@@ -8,7 +7,7 @@ import (
 )
 
 // Constructs the CSP 'default-src' directive.
-// The 'default-src' directive sets a default source list for a number of directives. 
+// The 'default-src' directive sets a default source list for a number of directives.
 // If those directives do not have an explicit source list, they will fall back to using this default list.
 // See: [CSP.Directives.default-src].
 //

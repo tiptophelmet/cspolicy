@@ -1,4 +1,3 @@
-// Sources for Content-Security-Policy directives.
 package src
 
 // UnsafeInlineVal represents the CSP 'unsafe-inline' source.

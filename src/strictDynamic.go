@@ -1,4 +1,3 @@
-// Sources for Content-Security-Policy directives.
 package src
 
 // StrictDynamicVal represents the CSP 'strict-dynamic' source.

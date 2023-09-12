@@ -1,4 +1,3 @@
-// Directives for Content-Security-Policy headers.
 package directives
 
 // Constructs the CSP 'upgrade-insecure-requests' directive.
