@@ -3,25 +3,18 @@
 
 User-friendly API to build your Content-Security-Policy HTTP header.
 
-## Overview
+## ℹ️ Overview
 
-CSPolicy is designed to simplify the process of creating and managing CSP headers in Go applications. With a structured approach to defining sources and directives, this library ensures that you maintain a robust and secure content policy for your web applications.
+CSPolicy is designed to simplify the process of creating and managing CSP headers in Go applications. With a structured approach to defining sources and directives, this library ensures that you maintain a robust and secure Content-Security-Policy HTTP header for your Go applications.
 
-## Features
+## 💻 Getting Started
 
-- **Structured Directives**: Define CSP directives like `script-src`, `img-src`, and more in a structured manner.
-- **Source Validation**: Ensure that only valid sources are added to your CSP headers.
-- **Extensible**: Easily extend the library to support additional CSP directives and sources as they emerge.
-- **Detailed Documentation**: Each directive and source comes with detailed inline documentation, making it easier to understand their purpose and usage.
-
-## Getting Started
-
-### Installation
+### ⚙️ Installation
 ```
 go get github.com/tiptophelmet/cspolicy
 ```
 
-### Usage
+### 💡 Usage
 Here's a basic example to get you started:
 ```
 package main
@@ -62,11 +55,11 @@ func main() {
 }
 ```
 
-## Documentation
+## 📖 Documentation
 Visit pkg.go.dev/github.com/tiptophelmet/cspolicy.
 
-## Contributing
-We welcome contributions! If you find a bug or have a feature request, please open an issue. If you'd like to contribute code, please open a pull request.
+## 🙋 Contributing
+Your contribution is valuable! If you find a bug or have a feature request, please open an issue. If you'd like to contribute code, please open a pull request.
 
-## License
+## 🏷️ License
 This project is licensed under the MIT License. See the LICENSE file for details.
