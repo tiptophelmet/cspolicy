@@ -3,7 +3,7 @@
 
 User-friendly API to build your Content-Security-Policy HTTP header.
 
-## ℹ️ Overview
+## ⬇️ Overview
 
 CSPolicy is designed to simplify the process of creating and managing CSP headers in Go applications. With a structured approach to defining sources and directives, this library ensures that you maintain a robust and secure Content-Security-Policy HTTP header for your Go applications.
 
