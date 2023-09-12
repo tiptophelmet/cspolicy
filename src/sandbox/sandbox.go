@@ -1,5 +1,10 @@
+// Lists allowed values for [CSP.Directives.sandbox].
+//
+// [CSP.Directives.sandbox]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox
 package sandbox
 
+
+// Constraint for [directives.Sandbox].
 type SandboxVal string
 
 const (
