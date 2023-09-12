@@ -1,3 +1,4 @@
+// Provides constraints for specific CSP directives.
 package constraint
 
 import (
@@ -7,6 +8,9 @@ import (
 	"github.com/tiptophelmet/cspolicy/src"
 )
 
+// Represents a constraint for the 'frame-ancestors' CSP directive.
+// It ensures that only [src.HostVal], [src.SchemeVal], [src.SelfVal] 
+// and [src.NoneVal] are applicable for [directives.FrameAncestors].
 type FrameAncestorsConstraint struct {
 	validated []src.SourceVal
 }
@@ -28,6 +32,8 @@ func (c *FrameAncestorsConstraint) validate(source src.SourceVal) bool {
 	return true
 }
 
+// Sources takes a variadic argument of sources, validates each one,
+// and returns the successfully validated sources.
 func (c *FrameAncestorsConstraint) Sources(sources ...src.SourceVal) []src.SourceVal {
 	if len(c.validated) != 0 {
 		return c.validated
