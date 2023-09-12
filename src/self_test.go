@@ -1,3 +1,4 @@
+// Sources for Content-Security-Policy directives.
 package src
 
 import "testing"

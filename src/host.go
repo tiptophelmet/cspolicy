@@ -1,3 +1,4 @@
+// Sources for Content-Security-Policy directives.
 package src
 
 import (
@@ -6,10 +7,16 @@ import (
 	"strings"
 )
 
+// HostVal represents a CSP host source.
+// The host source allows for a specific domain to be whitelisted as a valid source for content.
+// See: [CSP.Sources.host-source].
+//
+// [CSP.Sources.host-source]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#host-source
 type HostVal struct {
 	source string
 }
 
+// Returns the string representation of the host source.
 func (v *HostVal) String() string {
 	if !v.isValid() {
 		return ""
@@ -47,6 +54,7 @@ func (v *HostVal) isValid() bool {
 	return err == nil
 }
 
+// Instantiates a struct for <host-source> source.
 func Host(source string) *HostVal {
 	return &HostVal{source}
 }
